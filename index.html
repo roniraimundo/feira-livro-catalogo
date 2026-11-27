@@ -12,7 +12,6 @@
     #atualizacao { margin: 0 2px 10px; font-size: .875rem; color: #526577; }
     .toolbar input:disabled { background: #f3f6fa; }
   </style>
-  <script src="./catalogo.js" defer></script>
 </head>
 <body>
   <header>
@@ -36,5 +35,11 @@
     </nav>
   </main>
   <footer>Preços e disponibilidade sujeitos a alteração durante a feira.</footer>
+  <script>
+    const catalogoScript = document.createElement('script');
+    const chave = crypto.getRandomValues(new Uint32Array(2)).join('-');
+    catalogoScript.src = './catalogo.js?v=' + chave;
+    document.body.append(catalogoScript);
+  </script>
 </body>
 </html>
