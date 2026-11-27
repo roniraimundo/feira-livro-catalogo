@@ -75,7 +75,7 @@ obter('proximo').addEventListener('click', () => mudarPagina(1));
 
 async function carregar() {
   try {
-    const resposta = await fetch('./catalogo.json');
+    const resposta = await fetch('./catalogo.json', { cache: 'no-store' });
     if (!resposta.ok) throw new Error('Catálogo indisponível');
     const dados = await resposta.json();
     catalogo = dados.itens.map(item => ({
