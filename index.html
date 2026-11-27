@@ -1,11 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Feira do Livro Espírita - U.S.E. - 2026</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173d62">
+  <title>FEIRA DO LIVRO ESPÍRITA - U.S.E. - 2026</title>
+  <style>
+:root{font-family:system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:#23344a;background:#f3f6fa}*{box-sizing:border-box}body{margin:0}header{background:#173d62;color:#fff;padding:28px 18px 25px}header .wrap{max-width:1080px;margin:auto}h1{font-size:clamp(1.5rem,5vw,2rem);margin:0 0 5px}header p{margin:0;color:#d9e8f6;font-size:.95rem}main{max-width:1080px;margin:0 auto;padding:20px 15px 28px}.toolbar{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:12px}input{flex:1;min-width:0;width:100%;border:1px solid #b6c6d6;border-radius:12px;padding:14px 13px;font:inherit;background:white}button{border:0;border-radius:11px;background:#155e93;color:white;font:inherit;font-weight:650;padding:12px 16px;cursor:pointer;min-height:46px}button:focus-visible,input:focus-visible{outline:3px solid #79b9eb;outline-offset:2px}button:disabled{opacity:.45;cursor:default}#status{color:#526577;font-size:.91rem;min-height:23px;margin:7px 2px 13px}.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,310px),1fr));gap:13px}.book{background:white;border:1px solid #e1e8f0;border-radius:14px;padding:16px;box-shadow:0 2px 9px #1634540a;display:flex;flex-direction:column;gap:8px;min-width:0}.code{font-size:.75rem;overflow-wrap:anywhere;letter-spacing:.025em;color:#65788c}.title{font-size:1.08rem;font-weight:750;line-height:1.35;overflow-wrap:anywhere}.meta{font-size:.9rem;color:#45566a;overflow-wrap:anywhere}.meta b{color:#334b62}.bottom{display:flex;justify-content:space-between;align-items:end;gap:10px;margin-top:auto;padding-top:10px;border-top:1px solid #edf1f5}.price-label{font-size:.73rem;color:#66788a}.price{font-size:1.3rem;font-weight:800;color:#116447;overflow-wrap:anywhere}.empty{background:white;border-radius:14px;padding:28px;text-align:center;color:#526577;grid-column:1/-1}.pagination{display:flex;align-items:center;justify-content:center;gap:12px;margin:22px 0;flex-wrap:wrap}.pagination span{font-size:.85rem;color:#526577}footer{text-align:center;padding:18px;color:#65778b;font-size:.78rem}@media(max-width:600px){header{padding:23px 16px}main{padding:16px 12px}.toolbar{display:grid;grid-template-columns:1fr}.toolbar button{width:100%}.cards{grid-template-columns:1fr}.book{padding:15px}.pagination{gap:8px}.pagination button{flex:1;max-width:160px}}@media(prefers-reduced-motion:no-preference){button{transition:filter .15s}button:hover:not(:disabled){filter:brightness(1.1)}}
+    .pagination[hidden] { display: none; }
+    h1 { overflow-wrap: anywhere; }
+    #atualizacao { margin: 0 2px 10px; font-size: .875rem; color: #526577; }
+    .toolbar input:disabled { background: #f3f6fa; }
+  </style>
+  <script src="./catalogo.js" defer></script>
 </head>
 <body>
-    <h1>FEIRA DO LIVRO ESPÍRITA - U.S.E. - 2026</h1>
-    <p>Catálogo público em preparação.</p>
+  <header>
+    <div class="wrap">
+      <h1>FEIRA DO LIVRO ESPÍRITA - U.S.E. - 2026</h1>
+      <p>Consulte os exemplares disponíveis na última atualização</p>
+    </div>
+  </header>
+  <main>
+    <form class="toolbar" id="pesquisa">
+      <input id="busca" type="search" placeholder="Título, autor, editora ou código" aria-label="Pesquisar livros" disabled>
+      <button id="pesquisar" type="submit" disabled>Pesquisar livros</button>
+    </form>
+    <p id="atualizacao" hidden></p>
+    <div id="status" role="status">Carregando livros...</div>
+    <section id="lista" class="cards" aria-label="Livros disponíveis"></section>
+    <nav class="pagination" aria-label="Paginação" hidden>
+      <button id="anterior" type="button" disabled>Anterior</button>
+      <span id="pagina"></span>
+      <button id="proximo" type="button" disabled>Próxima</button>
+    </nav>
+  </main>
+  <footer>Preços e disponibilidade sujeitos a alteração durante a feira.</footer>
 </body>
 </html>
