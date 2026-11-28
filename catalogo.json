@@ -1,6 +1,6 @@
 {
-    "atualizado_em":  "27/11/2026 às 16:27",
-    "total":  2016,
+    "atualizado_em":  "28/11/2026 às 07:57",
+    "total":  2017,
     "itens":  [
                   {
                       "codigo":  "000001",
@@ -13548,6 +13548,14 @@
                   },
                   {
                       "codigo":  "001708",
+                      "titulo":  "Segredo das Estrelas (O)",
+                      "genero_feira_clarim":  "INFANTO JUVENIL",
+                      "autores":  "Andrei Moreira / Atividades: Bianca Ganuza / Leonardo Josué",
+                      "editora":  "INFINDA",
+                      "preco_por":  "27.50"
+                  },
+                  {
+                      "codigo":  "002017",
                       "titulo":  "Segredo das Estrelas (O)",
                       "genero_feira_clarim":  "INFANTO JUVENIL",
                       "autores":  "Andrei Moreira / Atividades: Bianca Ganuza / Leonardo Josué",
